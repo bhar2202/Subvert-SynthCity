@@ -8,6 +8,7 @@ public class Robot : MonoBehaviour
     private bool p = false;
 
     public SpriteRenderer sr;
+    public Rigidbody2D rb;
     public virtual void Possessed() {
         p = !p;
         switch(p) {

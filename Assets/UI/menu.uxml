@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/menu.uss?fileID=7433441132597879392&amp;guid=0bc4082d78b6bda4b9ce4a28937c9702&amp;type=3#menu" />
     <ui:VisualElement style="flex-grow: 1; background-color: rgb(68, 0, 91);" />
-    <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quit-button" style="-unity-text-align: middle-center; height: 66px; width: 141px; position: absolute; top: 342px; left: 389px;" />
-    <ui:Button text="Begin" parse-escape-sequences="true" display-tooltip-when-elided="true" name="start-button" style="-unity-text-align: middle-center; height: 66px; width: 141px; position: absolute; top: 178px; left: 387px;" />
-    <ui:Label tabindex="-1" text="Subvert Synthcity" parse-escape-sequences="true" display-tooltip-when-elided="true" style="position: absolute; top: 20px; left: 173px; height: 108px; width: 539px; -unity-text-align: upper-center; font-size: 80px;" />
+    <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quit-button" style="-unity-text-align: middle-center; height: 141px; width: 404px; position: absolute; top: 656px; left: 465px; font-size: 80px;" />
+    <ui:Button text="Begin" parse-escape-sequences="true" display-tooltip-when-elided="true" name="start-button" style="-unity-text-align: middle-center; height: 109px; width: 401px; position: absolute; top: 394px; left: 465px; font-size: 80px;" />
+    <ui:Label tabindex="-1" text="Subvert Synthcity" parse-escape-sequences="true" display-tooltip-when-elided="true" style="position: absolute; top: 105px; left: 447px; height: 103px; width: 539px; -unity-text-align: upper-center; font-size: 150px; color: rgb(255, 255, 255);" />
 </ui:UXML>

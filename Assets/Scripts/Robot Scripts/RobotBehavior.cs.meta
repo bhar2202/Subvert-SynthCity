@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 40121067399a6724b99be13fc0d40989
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - robotType: {instanceID: 0}
+  - defaultSprite: {fileID: 21300000, guid: 7f855ee2df21b894c838a6ba0a8c523f, type: 3}
+  - possessedSprite: {fileID: 21300000, guid: 94e5bc19c4d4d08478fb56edde42deaf, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

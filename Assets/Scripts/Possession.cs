@@ -6,44 +6,38 @@ public class Possession : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    // i would like to designate current and target object, but ill get to that when i have more time
-    public GameObject toaster_obj;
-    public GameObject roomba_obj;
-
-
-    // i hate this and ill get rid of it when current and target are dynamic
-    public bool toaster_active = true;
+    [SerializeField] private GameObject[] robots;
+    private GameObject current_obj;
+    private GameObject target_obj;
 
     void Start()
     {
-        toaster_obj = GameObject.Find("Toaster");
-        roomba_obj = GameObject.Find("Roomba");
-        toaster_obj.GetComponent<RobotBehavior>().possess_him();
+        current_obj = robots[0];
+        current_obj.GetComponent<RobotBehavior>().possess_him();
     }
 
     // Update is called once per frame
     void Update()
     {
-        var distance = (toaster_obj.transform.position - roomba_obj.transform.position).magnitude;
-        if (Input.GetKeyDown("p") && distance < 4)
+        
+        if (Input.GetKeyDown("p"))
         {
-            if (toaster_active)
+            for (int i = 0; i < robots.Length; i++)
             {
-                toaster_obj.GetComponent<RobotBehavior>().enabled = false;
-                toaster_obj.GetComponent<RobotBehavior>().possess_him();
-                roomba_obj.GetComponent<RobotBehavior>().enabled = true;
-                roomba_obj.GetComponent<RobotBehavior>().possess_him();
-
-
-                toaster_active = false;
-            }
-            else
-            {
-                toaster_obj.GetComponent<RobotBehavior>().enabled = true;
-                roomba_obj.GetComponent<RobotBehavior>().enabled = false;
-                roomba_obj.GetComponent<RobotBehavior>().possess_him();
-                toaster_obj.GetComponent<RobotBehavior>().possess_him();
-                toaster_active = true;
+                if (robots[i].name != current_obj.name)
+                {
+                    target_obj = robots[i];
+                    var distance = (current_obj.transform.position - target_obj.transform.position).magnitude;
+                    if (distance < 4)
+                    {
+                        current_obj.GetComponent<RobotBehavior>().enabled = false;
+                        current_obj.GetComponent<RobotBehavior>().possess_him();
+                        target_obj.GetComponent<RobotBehavior>().enabled = true;
+                        target_obj.GetComponent<RobotBehavior>().possess_him();
+                        current_obj = target_obj;
+                        break;
+                    }
+                }
             }
         }
     }

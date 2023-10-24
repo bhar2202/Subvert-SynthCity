@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/menu.uss?fileID=7433441132597879392&amp;guid=0bc4082d78b6bda4b9ce4a28937c9702&amp;type=3#menu" />
+    <ui:Button text="Access Granted" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quit-button" style="-unity-text-align: middle-center; height: 141px; width: 700px; position: absolute; top: 750px; left: 354px; font-size: 80px;" />
+    <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" style="position: absolute; top: -15px; left: 346px; height: 97px; width: 693px; -unity-text-align: upper-center; font-size: 150px; color: rgb(255, 255, 255);" />
+</ui:UXML>

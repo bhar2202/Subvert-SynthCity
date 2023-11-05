@@ -12,8 +12,7 @@ public class CellController : MonoBehaviour
     
     [SerializeField] private float correctRot = 90.0f;
     
-    [SerializeField] public bool isLit;
-    [SerializeField] public bool isSource;
+    
     
     [SerializeField] private Sprite lightSprite;
     [SerializeField] private Sprite darkSprite;
@@ -23,20 +22,38 @@ public class CellController : MonoBehaviour
     private bool isRotating = false;
     private float targetRotation = 0.0f;
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("Trigger Collision");
-        if (other.GetComponent<CellController>().isLit)
-        {
-            isLit = true;
-            gameObject.GetComponent<SpriteRenderer>().sprite = lightSprite;
-        }
-    }
+    public float inPosition = false;
+
+  
+    
+    // void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     Debug.Log("Trigger Collision");
+    //     if (other.GetComponent<CellController>().isLit)
+    //     {
+    //         isLit = true;
+    //         gameObject.GetComponent<SpriteRenderer>().sprite = lightSprite;
+    //     }
+    // }
+    
+    // void OnTriggerExit2D(Collider2D other)
+    // {
+    //     if (isRotating)
+    //     {
+    //         isLit = false;
+    //                 gameObject.GetComponent<SpriteRenderer>().sprite = darkSprite;
+    //     }
+    //     
+    // }
     
     void Start()
     {
         //generate random rotation
         transform.rotation = Quaternion.Euler(0, 0, rots[Random.Range(0,4)]);
+        if (isLit)
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = lightSprite;
+        }
     }
 
     // Update is called once per frame

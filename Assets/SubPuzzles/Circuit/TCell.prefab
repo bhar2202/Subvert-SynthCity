@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5790747206923414240}
   m_Layer: 0
   m_Name: TCell
-  m_TagString: Untagged
+  m_TagString: Cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,10 +104,9 @@ MonoBehaviour:
   rotSpeed: 90
   threshold: 15
   correctRot: 90
-  isLit: 0
-  isSource: 0
   lightSprite: {fileID: 21300000, guid: 78e7c9643af6d504ab6035c0bd0cd5e9, type: 3}
   darkSprite: {fileID: 21300000, guid: 4f883e960b1d3ff40a921f1b407e9a59, type: 3}
+  inPosition: 0
 --- !u!61 &3306255451414669513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -160,7 +159,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3154533052489613003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -205,7 +204,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3154533052489613003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -250,7 +249,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3154533052489613003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
